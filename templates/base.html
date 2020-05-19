@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+    <head>
+        <html lang="en" dir="ltr">
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <link href='http://fonts.googleapis.com/css?family=Frijole' rel='stylesheet' type='text/css'>
+        <style type="text/css">
+
+	      h1
+	      {
+	        font-size:50px;
+	        margin-top:0;
+	        font-family:Arial, sans-serif;
+	        text-shadow:2px 0 15px #292929;
+	        letter-spacing:6px;
+	        text-decoration:none;
+	        color:#AAA;
+	      }
+	      footer{ 
+			  position:absolute; 
+			  bottom:0; 
+			  width:100%; 
+			  height:100px; 
+			}
+		</style>
+    </head>
+ <body>
+ 	
+    <header>
+      <div class="container">
+      </div>
+    </header>
+    <div id="content">
+    	{% block content %}
+    	{% endblock %}
+    </div>
+    
+ </body>
+</html>

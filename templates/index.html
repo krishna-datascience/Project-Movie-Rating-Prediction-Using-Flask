@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+
+{% block content %}
+	<style>
+		body
+	      {
+			border: 2px solid black;
+	   		padding: 2500;
+	   		margin: 0;
+	    	background: url("/static/bg_image.jpg");
+	    	background-repeat: no-repeat;
+	    	background-size: 100%;	      }
+	</style>
+	<div class="text-center">
+        <h1>** Welcome to the Movie Rating **</h1>
+    </div>
+
+    <section class="jumbotron text-center">
+    	<div class="container">
+      		<p class="lead text-muted">The idea is that using existing data we compute the rating of a particular movie and showcase it here</p>
+          <div style="text-align: center;">
+            <form method="POST">
+              <label>Movie Name : </label>
+              <input type="" name="movie">
+              <input type="submit" value="Get Rating">
+            </form>
+         </div>  
+      		<p class="lead text-muted"><strong>Press Ratings when you are ready!</strong></p>
+      		<p>
+        		<a href="{{ url_for('ratings') }}" class="btn btn-primary my-2">Random Movies Ratings</a>
+      		</p>
+    	</div>
+  	</section>
+  	<footer class="footer mt-auto py-3">
+  		<div class="text-center">
+    		<span class="text-muted">Flask Application</span>
+  		</div>
+	</footer>
+{% endblock %}
+

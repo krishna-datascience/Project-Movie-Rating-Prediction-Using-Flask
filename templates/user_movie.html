@@ -1,0 +1,59 @@
+{% extends "base.html" %}
+{% block content %}
+    <style type="text/css">    
+        body{
+            padding: 20px;
+            background: #638CB8;
+            background-repeat: no-repeat;
+            background-size: 450px 450px; 
+            background-position: center center;
+        }
+        h1{
+        font-size:40px;
+        margin-top:0;
+        font-family:Arial, sans-serif;
+        text-shadow:2px 0 15px #292929;
+        letter-spacing:4px;
+        color:#AAA;
+    }
+    a{
+        color: red;
+    }
+
+	.center-column{
+	width:600px;
+	margin: 20px auto;
+	padding:20px;
+	background-color: #fff;
+	border-radius: 3px;
+	box-shadow: 6px 2px 30px 0px rgba(0,0,0,0.75);
+	}
+    </style>          
+    
+
+    <div class="text-center">
+        <h1>Movies Ratings based on DataBase</h1>
+    </div>
+
+    <div class="text-center">
+    	<a href="{{ url_for('index') }}" class="btn btn-success" role="button">Home</a>
+    	<a href="{{ url_for('ratings') }}" class="btn btn-success">Random Movies Ratings</a>
+    </div>
+<div class="row center-column">
+ 
+        	{% if check %}
+            <div class="card-body" style="font-family: 'fantasy'; font-size: 150%;">
+              <strong><a href="{{link}}" target="_blank"><p class="card-text text-center">{{movie}}</p></a>
+              <p class="card-text text-center">{{rating}}</p></strong>
+            </div>
+            {% else %}
+            <div class="card-body">
+              <p class="card-text text-center">Movie Not in DataBase</p>
+              <p class="card-text text-center">-</p>
+            </div>
+            {% endif %}
+</div>
+
+
+
+{% endblock %}

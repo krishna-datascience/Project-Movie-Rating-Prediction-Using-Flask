@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+{% block content %}
+    <style type="text/css">    
+        body{
+            padding: 20px;
+            background: #638CB8;
+            background-repeat: no-repeat;
+            background-size: 450px 450px; 
+            background-position: center center;
+        }
+        h1{
+        font-size:40px;
+        margin-top:0;
+        font-family:Arial, sans-serif;
+        text-shadow:2px 0 15px #292929;
+        letter-spacing:4px;
+        color:#AAA;
+    }
+    a{
+        color: red;
+    }
+    </style>          
+    
+    <div class="text-center">
+        <h1>Movies Ratings based on Data-Set</h1>
+    </div>
+
+    <div style="text-align: center;">
+            <form method="POST" action="{{ url_for('index') }}">
+              <label>Movie Name : </label>
+              <input type="" name="movie">
+              <input type="submit" value="Get Rating">
+            </form>
+    </div>  
+<div class="row">
+    {% for movie in movies %}
+    <div class="col-md-4">
+        <div class="card mb-4 shadow-sm">
+            <div class="card-body">
+              <p class="card-text text-center">{{movie.0}}</p>
+              <p class="card-text text-center">{{movie.1}}</p>
+            </div>
+            
+        </div>
+    </div>
+    {% endfor %}
+</div>
+
+{% endblock %}
